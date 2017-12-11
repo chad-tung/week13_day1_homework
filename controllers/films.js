@@ -30,6 +30,11 @@ filmRouter.delete("/:id", function(req, res) {
   res.json(films);
 });
 
+filmRouter.put("/add-review/:id", function(req, res) {
+  films[req.params.id].addReview(req.body.review);
+  res.json(films);
+});
+
 
 
 // filmRouter.get('')
